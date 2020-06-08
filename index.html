@@ -1,0 +1,158 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="hyphen.css" type="text/css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <style>
+    
+   
+    </style>
+
+  
+</head>
+<body style="overflow: hidden;">
+
+  
+
+
+<section container class="margin" style="height: 100vh display: block !important;">
+        <H1 style="margin-top: 60px; font-weight: 400; font-size: 80px !important; display: block; width: 100%;">Waver<i style="font-size: 120px; margin-top: -30px; color: red" icon>album</i></H1>
+        <H6>Carefully picked music to help you get through quarantine or anything else.</H6>
+    
+
+    <span card class="center v-center depth-2" style="display: flex; width: 100%; position: relative; padding-top: 8px; padding-bottom: 8px;">
+
+        <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
+        <div id="info" style="position: absolute; left: 5px; top: 12px;">loading...</div>
+        
+        <a btn icon class="" loop>loop</a>
+        <a btn icon class="" mute>volume_up</a>
+        <a btn icon class="large" prev>chevron_left</a>
+        <a btn icon class="large" play>play_arrow</a>
+        <a btn icon class="large" next>chevron_right</a>
+        
+        <span dropdown>
+            <a btn icon class="activator">slow_motion_video</a>
+            <ul>
+                <a btn speed="0.25">0.25</a>
+                <a btn speed="0.5">0.5</a>
+                <a btn speed="1">1</a>
+                <a btn speed="1.5">1.5</a>
+                <a btn speed="2">2</a>
+            </ul>
+        </span>
+
+        <a btn action="#dialog" class="raised accent red rounded" style="position: absolute; right: 6px; top: 10px;" >music<i>library_music</i></a>
+    </span>
+<iframe id="ytplayer" type="text/html" width="720" height="405"
+src="https://www.youtube.com/embed/0vtfCNU-qkA"
+frameborder="0" allowfullscreen>
+   
+   
+</section>
+<span dialog id="dialog" class="full-screen">
+    <aside>
+        <span topbar class="depth-0">
+            <a btn icon action="#closedialog2">close</a>    
+            <p title>Waver Library</p>
+            <a btn icon class="right">share</a>
+            <span dropdown>
+                <a btn icon class="activator">more_vert</a>
+                <ul style="width: 170px">
+                    <a btn><i>assignment</i>Assignmendfdts</a>
+                    <a btn>Courses</a>
+                    <a btn>Grades</a>
+                    <a btn>Wayfinder</a>
+             
+                    <a btn class="divider">Log out</a>
+                </ul>
+            </span>
+        </span>
+        <section container class="space-evenly v-center" style="height: 200px; width: 100%;">
+            
+            <span card style="width: 344px">
+                <img src="media/party.jpg" width="100%">
+                <section content>    
+                    <p title>Party music</p>
+                    <p subtitle>EDM, Electro</p>
+                    <article style="font-size: 13px;">
+                        Sometimes you feel like partying by yourself, or maybe you aren't alone?
+                    </article>
+                </section>
+                <section actions>
+                    <a btn class="accent red extended center" style="width: 100%" party>play</a>
+                </section>
+            </span>
+
+            <span card style="width: 344px">
+                <img src="media/rap.jpg" width="100%">
+                <section content>    
+                    <p title>Flexing music</p>
+                    <p subtitle>Rap, Hip Hop</p>
+                    <article style="font-size: 13px;">
+                        Keep the good vibes coming, best of rap music and much more.
+                    </article>
+                </section>
+                <section actions>
+                    <a btn class="accent red extended center" style="width: 100%">play</a>
+                </section>
+            </span>
+
+            <span card style="width: 344px">
+                <img src="media/reggae.jpg" width="100%">
+                <section content>    
+                    <p title>Chill music</p>
+                    <p subtitle>Reggae, Dancehall</p>
+                    <article style="font-size: 13px;">
+                        No matter what happens in your life, chances are this playlist will make it all a bit better.
+                    </article>
+                </section>
+                <section actions>
+                    <a btn class="accent red extended center" style="width: 100%">play</a>
+                </section>
+            </span>
+
+
+        </section>
+    </aside>
+    </span>
+<div class="area" >
+    <ul class="circles" style="margin: 0px; padding: 0px;">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://www.youtube.com/player_api"></script>    
+<script src="player.js"></script>
+<script src="hyphen.js"></script>
+<script>
+     $('a[action="#dialog"]').click(function() {
+                $('#dialog').addClass('open')
+                $('body').addClass('remove-scrollbar')
+
+            })
+
+            $('a[action="#closedialog2"]').click(function() {
+                $('#dialog').removeClass('open')
+                $('body').removeClass('remove-scrollbar')
+
+            })
+</script>
+</body>
+
+</html>
