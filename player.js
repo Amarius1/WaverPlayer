@@ -149,6 +149,10 @@ function onYouTubePlayerAPIReady() {
     $("[skip-prev]").on("mousedown", function() {
         player.previousVideo();
     });
+    $("[dark]").on("mousedown", function() {
+        $("body").toggleClass('dark');
+    });
+
 
    
 

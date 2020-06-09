@@ -70,7 +70,7 @@
   
 
 
-<section container class="margin center source mobile" style="height: 100vh display: block !important;">
+<section container class="margin center source mobile" style="height: 100vh display: block !important; user-select: none !important;">
         <H1 style="margin-top: 60px; font-weight: 400; font-size: 80px !important; display: block; width: 100%;">Waver<i style="font-size: 120px; margin-top: -30px; color: red" icon>album</i></H1>
         <H6 style="text-align: left !important; width: 100%;">Carefully picked music to help you get through quarantine or anything else.</H6>
     
@@ -80,7 +80,7 @@
         <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
         <div id="info" style="position: absolute; left: 5px; bottom: 10px; display: none;">loading...</div>
         
-      
+        <a btn icon class="" dark>filter_b_and_w</a>
         <a btn icon class="" loop>loop</a>
         <a btn icon class="" mute>volume_up</a>
         <a btn icon skip-prev>skip_previous</a>
@@ -98,7 +98,7 @@
                 <a btn speed="2">2</a>
             </ul>
         </span>
-        <a btn class="large" time style="width: 70px; position: relative; left: 2px; margin-bottom: -1px;"></a>
+        <a btn time style="width: 70px; position: relative; left: 2px; top: -4px; margin-bottom: -1px;"></a>
 
         <a btn action="#dialog" class="raised accent red rounded menu" style="position: absolute; right: 6px; top: 10px;">music<i>library_music</i></a>
     </span>
@@ -113,7 +113,7 @@
             <a btn icon action="#closedialog2">close</a>    
             <p title>Waver Library</p>
             
-            <span tabs style="width: 100%; position: absolute; top: 0px; left: 0px;" class="mobile center expanded">
+            <span tabs style="width: 100%; position: absolute; top: 5px; left: 0px;" class="mobile center expanded">
                 <a btn href="#tab1"><i>library_music</i>Playlists</a>
                 <a btn href="#tab2"><i>album</i>Albums</a>   
             </span>  
@@ -123,7 +123,7 @@
         </span>
         <section container class="space-evenly top mobile playlists" style="height: 100%; width: 100%; overflow: auto !important">
             <span tabs content>
-                <section id="tab1" tab container class="space-evenly v-center">
+                <section id="tab1" tab container class="top space-evenly">
            
              
              
