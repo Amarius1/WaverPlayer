@@ -1,7 +1,7 @@
 var info = document.getElementById('info');
 function onYouTubePlayerAPIReady() {
   var player = new YT.Player('player', {
-      videoId: 'Slv9aYoC4FM', // this is the id of the video at youtube (the stuff after "?v=")
+      videoId: 'I4Gq1u6J8lQ', // this is the id of the video at youtube (the stuff after "?v=")
       loop: true,
       playerVars: { 'autoplay': 0, 'controls': 1, 'playlist':['ptx7UlK9yWg', 'eehbCw95wcc'], },
       events: {
@@ -23,6 +23,29 @@ function onYouTubePlayerAPIReady() {
                 document.querySelector('[play]').textContent = 'play_arrow';
                 $("[play]").removeClass("activated");
               }
+              if (event.data == YT.PlayerState.PLAYING) {
+                var url = event.target.getVideoUrl();
+                // "http://www.youtube.com/watch?v=gzDS-Kfd5XQ&feature=..."
+                var match = url.match(/[?&]v=([^&]+)/);
+                // ["?v=gzDS-Kfd5XQ", "gzDS-Kfd5XQ"]
+                videoId = match[1];
+
+                $.getJSON( "https://www.googleapis.com/youtube/v3/videos?part=id%2Csnippet&id=" + videoId + "&key=AIzaSyBe5Bxh3H88cRF9U60dnidcIZd70xrWkvM", function( data ) {
+                //var obj = $.parseJSON(data);
+                    var vidName = data.items[0].snippet.localized.title;
+                    document.querySelector('.title').textContent = vidName;
+                    window.setInterval(function(){
+                        var s = Math.trunc(player.getDuration() - player.getCurrentTime());
+                        var minutes = Math.floor(s / 60);
+                        var seconds = s - minutes * 60;
+                        document.querySelector('[time]').textContent = minutes + ':' + seconds;
+                      }, 1000);
+                    
+                   
+                });
+
+                
+            }
              
           }
       }
@@ -101,22 +124,23 @@ function onYouTubePlayerAPIReady() {
     
     $("[next]").on("mousedown", function() {
         var skipper = player.getCurrentTime();
-        player.seekTo(skipper + 10);
+        player.seekTo(skipper + 30);
     });
     $("[prev]").on("mousedown", function() {
         var prevver = player.getCurrentTime();
-        player.seekTo(prevver - 10);
+        player.seekTo(prevver - 30);
     });
+    
     $("[party]").on("mousedown", function() {
-        player.loadPlaylist({'playlist':['-Rf56TeiEBs', 'eehbCw95wcc'], 'index': 0});
+        player.loadPlaylist({'playlist':['-Rf56TeiEBs', 'I4Gq1u6J8lQ'], 'index': 0});
         player.playVideo() 
     });
     $("[flex]").on("mousedown", function() {
-        player.loadPlaylist({'playlist':['Slv9aYoC4FM', 'eehbCw95wcc'], 'index': 0});
+        player.loadPlaylist({'playlist':['Slv9aYoC4FM', 'I4Gq1u6J8lQ'], 'index': 0});
         player.playVideo() 
     });
     $("[reggae]").on("mousedown", function() {
-        player.loadPlaylist({'playlist':['gbxxpSNE5o4', 'eehbCw95wcc'], 'index': 0});
+        player.loadPlaylist({'playlist':['gbxxpSNE5o4', 'I4Gq1u6J8lQ'], 'index': 0});
         player.playVideo() 
     });
     $("[skip-next]").on("mousedown", function() {
@@ -126,8 +150,13 @@ function onYouTubePlayerAPIReady() {
         player.previousVideo();
     });
 
+   
+
+
 
 };
 
-    document.getElementById( "title" ).innerText = player.getVideoData().title;
+
+
+
 

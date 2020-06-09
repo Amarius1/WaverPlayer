@@ -797,7 +797,7 @@ a[btn][icon] {
 }
 
 .left {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
 }
 
 .right {
@@ -827,8 +827,8 @@ a[btn][icon] {
 }
 
 .v-center {
-    align-items: center;
-    align-content: center;
+    align-items: center !important;
+    align-content: center !important;
 }
 
 .stretch {

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="hyphen.css" type="text/css" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet">
-    
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <style>
     [tabs] a.active::after, [tabs] a::after 
     {
@@ -61,26 +61,33 @@
 </head>
 <body style="overflow: hidden;">
 
+    <section container preloader class="center v-center">
+
+            <H5 style="margin-bottom: 40px; margin-top: -80px">Waver is getting things ready</H5>
+            <progress class="linear"></progress>
+
+    </section>
   
 
 
-<section container class="margin" style="height: 100vh display: block !important;">
+<section container class="margin center source mobile" style="height: 100vh display: block !important;">
         <H1 style="margin-top: 60px; font-weight: 400; font-size: 80px !important; display: block; width: 100%;">Waver<i style="font-size: 120px; margin-top: -30px; color: red" icon>album</i></H1>
-        <H6>Carefully picked music to help you get through quarantine or anything else.</H6>
+        <H6 style="text-align: left !important; width: 100%;">Carefully picked music to help you get through quarantine or anything else.</H6>
     
 
-    <span card class="center v-center depth-2" style="display: flex; width: 100%; position: relative; padding-top: 8px; padding-bottom: 8px;">
+    <span card class="center v-center depth-2 player mobile" style="display: flex; width: 100%; position: relative; padding-top: 8px; padding-bottom: 8px;">
 
         <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
-        <div id="info" style="position: absolute; left: 5px; bottom: -25px;">loading...</div>
-        <p id="title">title</p>
+        <div id="info" style="position: absolute; left: 5px; bottom: 10px; display: none;">loading...</div>
+        
+      
         <a btn icon class="" loop>loop</a>
         <a btn icon class="" mute>volume_up</a>
-        <a btn icon class="large" skip-prev>skip_previous</a>
+        <a btn icon skip-prev>skip_previous</a>
         <a btn icon class="large" prev>chevron_left</a>
         <a btn icon class="large" play>play_arrow</a>
         <a btn icon class="large" next>chevron_right</a>
-        <a btn icon class="large" skip-next>skip_next</a>
+        <a btn icon skip-next>skip_next</a>
         <span dropdown>
             <a btn icon class="activator">slow_motion_video</a>
             <ul>
@@ -91,9 +98,11 @@
                 <a btn speed="2">2</a>
             </ul>
         </span>
+        <a btn class="large" time style="width: 70px; position: relative; left: 2px; margin-bottom: -1px;"></a>
 
-        <a btn action="#dialog" class="raised accent red rounded" style="position: absolute; right: 6px; top: 10px;" >music<i>library_music</i></a>
+        <a btn action="#dialog" class="raised accent red rounded menu" style="position: absolute; right: 6px; top: 10px;">music<i>library_music</i></a>
     </span>
+    <p class="title center" style=" width: 400px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center"></p>
 
    
    
@@ -104,7 +113,7 @@
             <a btn icon action="#closedialog2">close</a>    
             <p title>Waver Library</p>
             
-            <span tabs style="width: 100%; position: absolute; top: 0px; left: 0px;" class="center expanded">
+            <span tabs style="width: 100%; position: absolute; top: 0px; left: 0px;" class="mobile center expanded">
                 <a btn href="#tab1"><i>library_music</i>Playlists</a>
                 <a btn href="#tab2"><i>album</i>Albums</a>   
             </span>  
@@ -112,7 +121,7 @@
             <a btn icon class="right">share</a>
            
         </span>
-        <section container class="space-evenly v-center" style="height: 200px; width: 100%;">
+        <section container class="space-evenly top mobile playlists" style="height: 100%; width: 100%; overflow: auto !important">
             <span tabs content>
                 <section id="tab1" tab container class="space-evenly v-center">
            
