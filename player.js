@@ -175,7 +175,7 @@ function onYouTubePlayerAPIReady() {
         player.loadPlaylist({list: "PLxKHVMqMZqUSGg5-AiNyUmAnt-hr3KrTd", index: 0, startSeconds: 0,suggestedQuality: "small"});
     });
     $("[zhu2]").on("mousedown", function() {
-        player.loadPlaylist({list: "PLB5vexwf7WGnoJqL-yOJjTAFoQkv79TLg", index: 0, startSeconds: 0,suggestedQuality: "small"});
+        player.loadPlaylist({list: "PLRh3pQdP8q3RTAV-2-8Sb9ykynNgF6COH", index: 0, startSeconds: 0,suggestedQuality: "small"});
     });
     $("[erik]").on("mousedown", function() {
         player.loadVideoById({'videoId': '_fuIMye31Gw','startSeconds': 5});
