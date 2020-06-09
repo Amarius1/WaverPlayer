@@ -3046,8 +3046,21 @@ a[btn][icon].fab.dark:focus
 }
 [tabs][content] > [tab].active 
 {
-    display: flex !important;
+   
     animation: fade-tab 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
 }
 [tabs] a.active 
 {
@@ -3121,7 +3134,7 @@ a[btn][icon].fab.dark:focus
 {
     margin-bottom: -2.5px;
 }
-[tabs][content] *
+[tabs][content]
 {
     width: 100%; 
 }

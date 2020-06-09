@@ -6,7 +6,54 @@
     <link href="style.css" type="text/css" rel="stylesheet">
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <style>
-    
+    [tabs] a.active::after, [tabs] a::after 
+    {
+        display: none !important;
+    }
+    [tabs] > a.active 
+    {
+        color: red !important;
+        border-radius: 5px !important;
+    }
+    [tabs] > a.active .waves-ripple
+    {
+        background-color: rgba(255,20,20,0.2);
+    }
+    a[btn].active .waves-ripple
+    {
+        background-color: rgba(255,20,20,0.2); !important;
+    }
+    a[btn].active > i 
+    {
+        color: red !important;
+    }
+    [collapsible].open ul
+    {
+        overflow: auto !important;
+    }
+    [collapsible].open ul a.active
+    {
+        color: black !important;
+    }
+ 
+    [tab]
+    {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;
+        width: 100%;
+    }
+ 
    
     </style>
 
@@ -25,14 +72,15 @@
     <span card class="center v-center depth-2" style="display: flex; width: 100%; position: relative; padding-top: 8px; padding-bottom: 8px;">
 
         <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
-        <div id="info" style="position: absolute; left: 5px; top: 12px;">loading...</div>
-        
+        <div id="info" style="position: absolute; left: 5px; bottom: -25px;">loading...</div>
+        <p id="title">title</p>
         <a btn icon class="" loop>loop</a>
         <a btn icon class="" mute>volume_up</a>
+        <a btn icon class="large" skip-prev>skip_previous</a>
         <a btn icon class="large" prev>chevron_left</a>
         <a btn icon class="large" play>play_arrow</a>
         <a btn icon class="large" next>chevron_right</a>
-        
+        <a btn icon class="large" skip-next>skip_next</a>
         <span dropdown>
             <a btn icon class="activator">slow_motion_video</a>
             <ul>
@@ -46,32 +94,31 @@
 
         <a btn action="#dialog" class="raised accent red rounded" style="position: absolute; right: 6px; top: 10px;" >music<i>library_music</i></a>
     </span>
-<iframe id="ytplayer" type="text/html" width="720" height="405"
-src="https://www.youtube.com/embed/0vtfCNU-qkA"
-frameborder="0" allowfullscreen>
+
    
    
 </section>
 <span dialog id="dialog" class="full-screen">
     <aside>
-        <span topbar class="depth-0">
+        <span topbar class="depth-0" style="position: relative;">
             <a btn icon action="#closedialog2">close</a>    
             <p title>Waver Library</p>
+            
+            <span tabs style="width: 100%; position: absolute; top: 0px; left: 0px;" class="center expanded">
+                <a btn href="#tab1"><i>library_music</i>Playlists</a>
+                <a btn href="#tab2"><i>album</i>Albums</a>   
+            </span>  
+
             <a btn icon class="right">share</a>
-            <span dropdown>
-                <a btn icon class="activator">more_vert</a>
-                <ul style="width: 170px">
-                    <a btn><i>assignment</i>Assignmendfdts</a>
-                    <a btn>Courses</a>
-                    <a btn>Grades</a>
-                    <a btn>Wayfinder</a>
-             
-                    <a btn class="divider">Log out</a>
-                </ul>
-            </span>
+           
         </span>
         <section container class="space-evenly v-center" style="height: 200px; width: 100%;">
-            
+            <span tabs content>
+                <section id="tab1" tab container class="space-evenly v-center">
+           
+             
+             
+         
             <span card style="width: 344px">
                 <img src="media/party.jpg" width="100%">
                 <section content>    
@@ -80,8 +127,24 @@ frameborder="0" allowfullscreen>
                     <article style="font-size: 13px;">
                         Sometimes you feel like partying by yourself, or maybe you aren't alone?
                     </article>
+                    
                 </section>
-                <section actions>
+                <span collapsible>
+    
+                    <a btn class="activator" style="margin: 0px !important; color: black !important;"><label style="margin: 0px; padding-left: 6px;">Playlist</label><i>keyboard_arrow_down</i></a>
+                        <ul style="height: 200px;">
+                            
+                            <a btn>Song 1</a>
+                            <a btn>Song 2</a>
+                            <a btn>Song 3</a>
+                            <a btn>Song 4</a>
+                            <a btn>Song 5</a> 
+                            <a btn>Song 6</a>
+                            <a btn>Song 7</a>
+                            
+                        </ul>
+                </span>
+                <section actions class="divider">
                     <a btn class="accent red extended center" style="width: 100%" party>play</a>
                 </section>
             </span>
@@ -96,7 +159,7 @@ frameborder="0" allowfullscreen>
                     </article>
                 </section>
                 <section actions>
-                    <a btn class="accent red extended center" style="width: 100%">play</a>
+                    <a btn class="accent red extended center" style="width: 100%"flex>play</a>
                 </section>
             </span>
 
@@ -110,11 +173,14 @@ frameborder="0" allowfullscreen>
                     </article>
                 </section>
                 <section actions>
-                    <a btn class="accent red extended center" style="width: 100%">play</a>
+                    <a btn class="accent red extended center" style="width: 100%" reggae>play</a>
                 </section>
             </span>
-
-
+        </section>
+            <section id="tab2" tab>
+                <H5>Content5</H5>
+            </section>
+        </span>
         </section>
     </aside>
     </span>

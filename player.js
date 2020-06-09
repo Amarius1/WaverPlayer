@@ -1,24 +1,27 @@
 var info = document.getElementById('info');
 function onYouTubePlayerAPIReady() {
   var player = new YT.Player('player', {
-      videoId: 'W7aaDTHv3oE', // this is the id of the video at youtube (the stuff after "?v=")
+      videoId: 'Slv9aYoC4FM', // this is the id of the video at youtube (the stuff after "?v=")
       loop: true,
       playerVars: { 'autoplay': 0, 'controls': 1, 'playlist':['ptx7UlK9yWg', 'eehbCw95wcc'], },
       events: {
           onReady: function (e) {
                 info.innerHTML = 'video is loaded';
-              
+                
           },
           
           onStateChange: function (event) {
-                var seconds = 0;
-                var timer;
               if (event.data === 1) {
                   info.innerHTML = 'video started playing';
+                  document.querySelector('[play]').textContent = 'pause';
+                  $("[play]").addClass("activated");
+                  
               }
               else 
               {
                 info.innerHTML = 'video paused';
+                document.querySelector('[play]').textContent = 'play_arrow';
+                $("[play]").removeClass("activated");
               }
              
           }
@@ -30,14 +33,12 @@ function onYouTubePlayerAPIReady() {
   function play() {
         player.playVideo() 
         $(this).one("click", pause);
-        $("[play]").addClass("activated");
-        document.querySelector('[play]').textContent = 'pause';
+     
     }
     function pause() {
         player.pauseVideo() 
         $(this).one("click", play);
-        $("[play]").removeClass("activated");
-        document.querySelector('[play]').textContent = 'play_arrow';
+
     }
     $("[play]").one("click", play);
 
@@ -107,9 +108,26 @@ function onYouTubePlayerAPIReady() {
         player.seekTo(prevver - 10);
     });
     $("[party]").on("mousedown", function() {
-        player.cuePlaylist({'playlist':['W7aaDTHv3oE', 'eehbCw95wcc']});
+        player.loadPlaylist({'playlist':['-Rf56TeiEBs', 'eehbCw95wcc'], 'index': 0});
+        player.playVideo() 
+    });
+    $("[flex]").on("mousedown", function() {
+        player.loadPlaylist({'playlist':['Slv9aYoC4FM', 'eehbCw95wcc'], 'index': 0});
+        player.playVideo() 
+    });
+    $("[reggae]").on("mousedown", function() {
+        player.loadPlaylist({'playlist':['gbxxpSNE5o4', 'eehbCw95wcc'], 'index': 0});
+        player.playVideo() 
+    });
+    $("[skip-next]").on("mousedown", function() {
+        player.nextVideo();
+    });
+    $("[skip-prev]").on("mousedown", function() {
+        player.previousVideo();
     });
 
 
 };
+
+    document.getElementById( "title" ).innerText = player.getVideoData().title;
 
