@@ -430,11 +430,11 @@ body.dark .player [btn]
 {
     color: rgba(150,150,150,1);
 }
-body.dark H1, body.dark H6, body.dark p, body.dark article, body.dark [collapsible] label, body.dark [time], body.dark [tabs] [btn]:not(.active), body.dark [topbar] [btn]:not(.active)
+body.dark H1, body.dark H6, body.dark p, body.dark article, body.dark [collapsible] label, body.dark [time], body.dark [tabs] [btn]:not(.active), body.dark [topbar] [btn]:not(.active),  body.dark [dropdown] ul [btn]
 {
     color: rgba(150,150,150,1) !important;
 }
-body.dark .player .menu
+body.dark .player .menu, body.dark [dropdown] ul
 {
     background-color: rgba(30,30,30,1) !important;
 }
