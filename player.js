@@ -30,6 +30,9 @@ function onYouTubePlayerAPIReady() {
                 // ["?v=gzDS-Kfd5XQ", "gzDS-Kfd5XQ"]
                 videoId = match[1];
 
+                var thumby = "https://i1.ytimg.com/vi/" + videoId + "/mqdefault.jpg";
+                document.querySelector('[thumb]').setAttribute("src", thumby);
+
                 $.getJSON( "https://www.googleapis.com/youtube/v3/videos?part=id%2Csnippet&id=" + videoId + "&key=AIzaSyBe5Bxh3H88cRF9U60dnidcIZd70xrWkvM", function( data ) {
                 //var obj = $.parseJSON(data);
                     var vidName = data.items[0].snippet.localized.title;

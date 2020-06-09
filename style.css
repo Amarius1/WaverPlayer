@@ -398,6 +398,12 @@ progress.linear:indeterminate::-moz-progress-bar {
         margin-top: 40px;
 
     }
+    [thumb]
+    {
+        position: absolute;
+        top: -300px !important;
+        left: 11.4% !important;
+    }
  
     
 }
