@@ -1,9 +1,9 @@
 var info = document.getElementById('info');
 function onYouTubePlayerAPIReady() {
   var player = new YT.Player('player', {
-      videoId: '9MJ-RuNYILo', // this is the id of the video at youtube (the stuff after "?v=")
+      videoId: 'b80Jw8MuZxo', // this is the id of the video at youtube (the stuff after "?v=")
       loop: true,
-      playerVars: { 'autoplay': 0, 'controls': 1, 'playlist':['ptx7UlK9yWg', 'eehbCw95wcc'], },
+      playerVars: { 'autoplay': 0, 'controls': 1, 'playlist':['aF5nhMIyeqI', 'y7kvGqiJC4g'], },
       events: {
           onReady: function (e) {
                 info.innerHTML = 'video is loaded';
