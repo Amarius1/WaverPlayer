@@ -164,8 +164,8 @@ function onYouTubePlayerAPIReady() {
     $("[blues3]").on("mousedown", function() {
         player.loadVideoById({'videoId': 'yE0lvVcf-UU'});
     });
-    $("[blues4]").on("mousedown", function() {
-        player.loadVideoById({'videoId': '1eNSWZ4x2ZU'});
+    $("[tame]").on("mousedown", function() {
+        player.loadPlaylist({list: "PLgteGodoADB7HRU6T4j6SIZ9a3Vnmbyqr", index: 1, startSeconds: 10,suggestedQuality: "small"});
     });
 
 
