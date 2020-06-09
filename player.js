@@ -132,7 +132,7 @@ function onYouTubePlayerAPIReady() {
     });
     
     $("[party]").on("mousedown", function() {
-        player.loadPlaylist({'playlist':['-Rf56TeiEBs', 'I4Gq1u6J8lQ'], 'index': 0});
+        player.loadPlaylist({'playlist':['7cPhKwRF4oY', '7cPhKwRF4oY', 'zo7g6-Ssnfo', 'kcWNepO_r44', 'khmH2es-9w4'], 'index': 0});
         player.playVideo() 
     });
     $("[flex]").on("mousedown", function() {
@@ -140,7 +140,7 @@ function onYouTubePlayerAPIReady() {
         player.playVideo() 
     });
     $("[reggae]").on("mousedown", function() {
-        player.loadPlaylist({'playlist':['gbxxpSNE5o4', 'I4Gq1u6J8lQ'], 'index': 0});
+        player.loadPlaylist({'playlist':['-DGLofFjUeE', 'Z1NPpxU_BQQ', 'q05liMm3LI4', 'on9TXY8kYyk', 'CHekNnySAfM', 'c9VQye6P8k0 ', 'W9mvTNh-plY','QI-m8z6Ibws'], 'index': 0});
         player.playVideo() 
     });
     $("[skip-next]").on("mousedown", function() {
@@ -155,7 +155,18 @@ function onYouTubePlayerAPIReady() {
 
 
    
-
+    $("[blues1]").on("mousedown", function() {
+        player.loadVideoById({'videoId': '1eNSWZ4x2ZU'});
+    });
+    $("[blues2]").on("mousedown", function() {
+        player.loadVideoById({'videoId': 'eabz_MOhYeA'});
+    });
+    $("[blues3]").on("mousedown", function() {
+        player.loadVideoById({'videoId': 'yE0lvVcf-UU'});
+    });
+    $("[blues4]").on("mousedown", function() {
+        player.loadVideoById({'videoId': '1eNSWZ4x2ZU'});
+    });
 
 
 };

@@ -450,6 +450,33 @@ body.dark .playlists, body.dark [tab]
 {
     background-color: black !important;
 }
+[card].album
+{
+    padding: 12px;
+    width: 240px;
+    align-items: center !important;
+    align-content: center !important;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+    margin: 2px;
 
-
-
+   
+}
+[card].album p
+{
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+}

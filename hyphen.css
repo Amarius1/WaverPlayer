@@ -3017,7 +3017,7 @@ a[btn][icon].fab.dark:focus
     transition: all 0.3s;
     margin-bottom: -40px;
 }
-[tabs] a
+[tabs] > a
 {
     align-items: center;
     align-content: center;
@@ -3062,15 +3062,15 @@ a[btn][icon].fab.dark:focus
     flex-direction: row;
     align-content: flex-start;
 }
-[tabs] a.active 
+[tabs] > a.active 
 {
     color: var(--accent) !important;
 }
-[tabs] a.active .waves-ripple 
+[tabs] > a.active .waves-ripple 
 {
     background-color: var(--accent-ripple);
 }
-[tabs] a.active::after 
+[tabs] > a.active::after 
 {
     height: 2.5px;
     width: 100%;
@@ -3081,7 +3081,7 @@ a[btn][icon].fab.dark:focus
     left: 0px;
     animation: animate-yellowbar 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-[tabs] a::after 
+[tabs] > a::after 
 {
     height: 2.5px;
     width: 100%;
@@ -3113,11 +3113,11 @@ a[btn][icon].fab.dark:focus
     }
 }
 
-[tabs].expanded a 
+[tabs].expanded > a 
 {
     width: 100%;
 } 
-[tabs].stacked a > i
+[tabs].stacked > a > i
 { 
     width: 100%;
     justify-content: center !important;
@@ -3125,12 +3125,12 @@ a[btn][icon].fab.dark:focus
     margin: 0px !important;
     
 }
-[tabs].stacked a 
+[tabs].stacked > a 
 {
     min-height: 72px;
     align-content: space-evenly;
 }
-[tabs].stacked a label 
+[tabs].stacked > a label 
 {
     margin-bottom: -2.5px;
 }
@@ -3248,7 +3248,7 @@ a[btn][icon].fab.dark:focus
 }
 [container].margin 
 {
-    padding: 2% 10%;
+    padding: 2% 10% !important;
 }
 [btn].accent.red 
 {
