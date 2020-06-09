@@ -82,9 +82,7 @@ function onYouTubePlayerAPIReady() {
 
     $("[song]").on("mousedown", function() {
 
-        player.loadVideoById({'videoId': 'bHQqvYy5KYo',
-               'startSeconds': 5,
-               'endSeconds': 60});
+        player.loadVideoById({'videoId': 'bHQqvYy5KYo','startSeconds': 5,'endSeconds': 60});
     });
 
     $("[speed='0.25']").on("mousedown", function() {
@@ -165,9 +163,26 @@ function onYouTubePlayerAPIReady() {
         player.loadVideoById({'videoId': 'yE0lvVcf-UU'});
     });
     $("[tame]").on("mousedown", function() {
-        player.loadPlaylist({list: "PLgteGodoADB7HRU6T4j6SIZ9a3Vnmbyqr", index: 1, startSeconds: 10,suggestedQuality: "small"});
+        player.loadPlaylist({list: "PLHwvDXmNUa92NlFPooY1P5tfDo4T85ORz", index: 0, startSeconds: 0,suggestedQuality: "small"});
     });
-
+    $("[wasp]").on("mousedown", function() {
+        player.loadPlaylist({list: "PLGFMsDB0B5xzjHxUz5E08STaWs7CGTobj", index: 0, startSeconds: 0,suggestedQuality: "small"});
+    });
+    $("[pink]").on("mousedown", function() {
+        player.loadPlaylist({list: "PL8222483A9B0BF163", index: 0, startSeconds: 0,suggestedQuality: "small"});
+    });
+    $("[zhu1]").on("mousedown", function() {
+        player.loadPlaylist({list: "PLxKHVMqMZqUSGg5-AiNyUmAnt-hr3KrTd", index: 0, startSeconds: 0,suggestedQuality: "small"});
+    });
+    $("[zhu2]").on("mousedown", function() {
+        player.loadPlaylist({list: "PLB5vexwf7WGnoJqL-yOJjTAFoQkv79TLg", index: 0, startSeconds: 0,suggestedQuality: "small"});
+    });
+    $("[erik]").on("mousedown", function() {
+        player.loadVideoById({'videoId': '_fuIMye31Gw','startSeconds': 5});
+    });
+    $("[avicii]").on("mousedown", function() {
+        player.loadPlaylist({list: "RDEM4eZDs_u8lV1UARX7tj9AEw", index: 0, startSeconds: 0,suggestedQuality: "small"});
+    });
 
 };
 

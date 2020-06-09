@@ -458,6 +458,7 @@ body.dark a[btn].accent.red
 {
     padding: 12px;
     width: 240px;
+    margin: 6px 2px !important;
     align-items: center !important;
     align-content: center !important;
     list-style: none;
