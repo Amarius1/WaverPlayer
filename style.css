@@ -450,6 +450,10 @@ body.dark .playlists, body.dark [tab]
 {
     background-color: black !important;
 }
+body.dark a[btn].accent.red
+{
+    color: red !important;
+}
 [card].album
 {
     padding: 12px;

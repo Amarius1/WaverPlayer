@@ -50,11 +50,11 @@ $(document).ready(function(){
     //Tabs
     //When page loads...
         $("[tabs][content] [tab]").removeClass('active'); //Hide all content
-        $("[tabs] a:first-child").addClass("active"); //Activate first tab
+        $("[tabs] > a:first-child").addClass("active"); //Activate first tab
         $("[tabs][content] [tab]:first-child").addClass('active'); //Show first tab content
      
         //On Click Event
-        $("[tabs] a").click(function() {
+        $("[tabs] > a").click(function() {
      
             $(this).siblings().removeClass('active'); //Remove any "active" class
             $(this).addClass('active'); //Add "active" class to selected tab
