@@ -51,6 +51,7 @@ body, html
     width: 100%;
     height: 100%;
     overflow: hidden;
+  
 }
 
 .circles li{
@@ -62,6 +63,8 @@ body, html
     background: rgba(255, 0, 0, 1);
     animation: animate 25s linear infinite;
     bottom: -150px;
+    filter: grayscale(0%);
+
     
 }
 
@@ -160,6 +163,27 @@ body, html
     height: 70px;
     animation-delay: 0s;
     animation-duration: 9s;
+}
+.circles li:nth-child(14){
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+    animation-duration: 13s;
+}
+.circles li:nth-child(15){
+    left: 60%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    animation-duration: 13s;
+}
+.circles li:nth-child(16){
+    left: 84%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+    animation-duration: 13s;
 }
 
 
@@ -421,9 +445,8 @@ progress.linear:indeterminate::-moz-progress-bar {
     }
 [dark]
 {
-    position: absolute;
-    left: 12px;
-    top: 12px;
+    position: relative;
+ 
 }
 body.dark .area,  body.dark
 {
@@ -511,10 +534,7 @@ body.dark a[btn].accent.red
 {
     background-color: rgba(255,20,20,0.2);
 }
-a[btn].active .waves-ripple
-{
-    background-color: rgba(255,20,20,0.2); !important;
-}
+
 a[btn].active > i 
 {
     color: red !important;
@@ -544,4 +564,68 @@ a[btn].active > i
     flex-direction: row;
     align-content: flex-start;
     width: 100%;
+}
+.menu
+{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    color: red !important;
+}
+.menu .waves-ripple 
+{
+    background-color: rgba(255, 40,20, 0.2);
+}
+[dark]
+{
+    position: absolute;
+    left: 16px;
+    top: 20px;
+}
+[thumb]
+{
+    filter: grayscale(0%);
+    
+    width: 102% !important;
+    margin-right: -1%;
+    margin-left: -1%;
+
+    margin-bottom: -2% !important;
+    margin-top: -1% !important;
+    transition: all 0.3s;
+
+
+  
+}
+.thumbwrap 
+{
+    width: 100% !important;
+    height: auto !important;
+    overflow: hidden;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+   
+}
+.player 
+{
+    position: relative !important;
+    display: flex !important;
+}
+.player p.title
+{
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);  
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    margin: 0px;
+    box-sizing:border-box;
+    padding: 6px;
+}
+.bwpaused 
+{
+    filter: grayscale(100%) !important;
+    transition: all 0.3s;
+    
 }

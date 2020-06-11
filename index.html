@@ -34,44 +34,49 @@
   
 
 
-<section container class="margin center source mobile" style="height: 100vh display: block !important; user-select: none !important;">
-        <H1 style="margin-top: 60px; font-weight: 400; display: block; width: 100%;">Waver<i style="font-size: 120px; margin-top: -30px; color: red" icon>album</i></H1>
+<section container class="margin center source mobile" style="height: 100vh; user-select: none !important;">
+        <H1 style="margin-top: 0px; font-weight: 400; display: block; width: 100%;">Waver<i style="font-size: 120px; margin-top: -30px; color: red" icon>album</i></H1>
         <H6 style="text-align: left !important; width: 100%;">Carefully picked music to help you get through quarantine or anything else.</H6>
     
 
-    <span card class="center v-center depth-2 player mobile" style="display: flex; width: 100%; position: relative; padding-top: 8px; padding-bottom: 8px;">
-     
-        <img thumb src="" class="depth-2" style="position: absolute; right: 0px; top: -190px; min-width: auto !important; border-radius: 5px;"> 
+    <span card container class="center depth-2 player mobile" style="width: 700px">
+        <span class="thumbwrap">
+            <img thumb src=""> 
+            <p class="title"></p>
+        </span>
         <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
         <div id="info" style="position: absolute; left: 5px; bottom: 10px; display: none;">loading...</div>
         
-        <a tabindex=-1 btn icon class="" dark>filter_b_and_w</a>
-        <a tabindex=-1 btn icon class="" loop>loop</a>
-        <a tabindex=-1 btn icon class="" mute>volume_up</a>
-        <a tabindex=-1 btn icon skip-prev>skip_previous</a>
-        <a tabindex=-1 btn icon class="large" prev>chevron_left</a>
-        <a tabindex=-1 btn icon class="large" play>play_arrow</a>
-        <a tabindex=-1 btn icon class="large" next>chevron_right</a>
-        <a tabindex=-1 btn icon skip-next>skip_next</a>
-        <span dropdown>
-            <a btn icon class="activator">slow_motion_video</a>
-            <ul>
-                <a btn speed="0.25">0.25</a>
-                <a btn speed="0.5">0.5</a>
-                <a btn speed="1">1</a>
-                <a btn speed="1.5">1.5</a>
-                <a btn speed="2">2</a>
-            </ul>
-        </span>
-        <a btn time style="width: 70px; position: relative; left: 2px; top: -4px; margin-bottom: -1px;"></a>
-
-        <a btn action="#dialog" class="raised accent red rounded menu" style="position: absolute; right: 6px; top: 10px;">music<i>library_music</i></a>
-    </span>
+        <section content>    
+            
     
-    <p class="title center" style=" width: 400px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center"></p>
+           
+            <a tabindex=-1 btn icon class="" loop>loop</a>
+            <a tabindex=-1 btn icon class="" mute>volume_up</a>
+            <a tabindex=-1 btn icon skip-prev>skip_previous</a>
+            <a tabindex=-1 btn icon class="large" prev>chevron_left</a>
+            <a tabindex=-1 btn icon class="large" play>play_arrow</a>
+            <a tabindex=-1 btn icon class="large" next>chevron_right</a>
+            <a tabindex=-1 btn icon skip-next>skip_next</a>
+            <span dropdown class="speed">
+                <a btn icon class="activator">slow_motion_video</a>
+                <ul>
+                    <a btn speed="0.25">0.25</a>
+                    <a btn speed="0.5">0.5</a>
+                    <a btn speed="1">1</a>
+                    <a btn speed="1.5">1.5</a>
+                    <a btn speed="2">2</a>
+                </ul>
+            </span>
+            <a btn time style="width: 70px; margin-right: -46px;"></a>
+            
+           
 
-   
-   
+            
+        </section>
+        <a tabindex=-1 btn icon class="raised" dark>filter_b_and_w</a>
+        <a btn action="#dialog" class="raised rounded menu" style="">music<i>library_music</i></a>
+    </span>
 </section>
 <span dialog id="dialog" class="full-screen">
     <aside>
@@ -214,6 +219,12 @@
     </span>
 <div class="area" >
     <ul class="circles" style="margin: 0px; padding: 0px;">
+            <li class="playreactbkg"></li>
+            <li></li>
+            <li class="playreactbkg"></li>
+            <li></li>
+            <li></li>
+            <li class="playreactbkg"></li>
             <li></li>
             <li></li>
             <li></li>
@@ -221,12 +232,9 @@
             <li></li>
             <li></li>
             <li></li>
+            <li class="playreactbkg"></li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="playreactbkg"></li>
     </ul>
 </div>
 
