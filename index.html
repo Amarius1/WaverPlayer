@@ -31,6 +31,43 @@
             <progress class="linear"></progress>
 
     </section>
+    <section container starter class="margin center v-center">
+
+        <span card style="width: 40%;">
+          
+            <section content>    
+                <p title>Welcome to Waver, new user!</p>
+                <p subtitle>Quality music</p>
+                <article style="font-size: 13px;">
+                    Before you go... Take a bit of time to read the terms and conditions and the instructions. Don't worry, you won't ever see this again.
+                </article>
+            </section>
+            <span collapsible>
+    
+                <a btn class="activator" style="margin: 0px !important; color: black !important;"><label style="margin: 0px; padding-left: 6px;">Instructions</label><i>keyboard_arrow_down</i></a>
+                    <ul>
+                        
+                        <a btn><i>filter_b_and_w</i>Dark Mode (toggle)</a>
+                        <a btn><i>loop</i>Loop Song (toggle)</a>
+                        <a btn><i>volume_up</i>Mute / Unmute (toggle)</a>
+                        <a btn><i>skip_previous</i>Previous Song</a>
+                        <a btn><i>skip_next</i>Next Song</a> 
+                        <a btn><i>chevron_left</i>Move -30s</a>
+                        <a btn><i>chevron_right</i>Move +30s</a>
+                        <a btn><i>slow_motion_video</i>Song Speed</a>
+                        <a btn><i style="color: red;">library_music</i>Waver Library</a>
+                    </ul>
+            </span>
+            <section actions>
+                <a btn>Terms & Conditions</a>
+          
+                <a btn class="accent red right" closehelp>done</a>
+            </section>
+        </span>
+        
+    
+
+    </section>
   
 
 
@@ -44,6 +81,7 @@
             <img thumb src=""> 
             <p class="title"></p>
         </span>
+       
         <div id="player" style="position: absolute; top: -9999px; left: -9999px;"></div>
         <div id="info" style="position: absolute; left: 5px; bottom: 10px; display: none;">loading...</div>
         
@@ -69,6 +107,7 @@
                 </ul>
             </span>
             <a btn time style="width: 70px; margin-right: -46px;"></a>
+            <a btn id="restore" class="accent raised">Reset</a>
             
            
 

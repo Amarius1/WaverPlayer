@@ -198,3 +198,23 @@ function onYouTubePlayerAPIReady() {
 
 
 
+if (! localStorage.noFirstVisit) {
+    console.log('first time');
+    document.querySelector('[starter]').style.display = 'flex';
+    
+    localStorage.noFirstVisit = "1";
+}
+
+document.getElementById('restore').onclick = function () {
+    localStorage.noFirstVisit = "";
+    document.getElementById('restore').innerHTML = "Reload";
+}
+
+$("[closehelp]").on("mousedown", function() {
+    $("[starter]").addClass("final");
+});
+
+var darkmode = 1;
+localStorage.setItem("on", darkmode);
+
+$('p.title').text(localStorage.getItem("darkmode"));

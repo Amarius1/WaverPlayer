@@ -611,10 +611,14 @@ a[btn].active > i
     position: relative !important;
     display: flex !important;
 }
+body.dark .player p.title 
+{
+    background-color: rgba(20,20,20,0.8);  
+}
 .player p.title
 {
     text-align: center;
-    background-color: rgba(255,255,255,0.6);  
+    background-color: rgba(255,255,255,0.8);  
     position: absolute;
     left: 0px;
     bottom: 0px;
@@ -628,4 +632,28 @@ a[btn].active > i
     filter: grayscale(100%) !important;
     transition: all 0.3s;
     
+}
+[starter]
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 99999999;
+    background-color: white;
+    display: none;
+    margin: 0;
+    list-style: none;
+ 
+
+    -webkit-flex-flow: row wrap;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;;
+}
+[starter].final 
+{
+    animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.1s both !important;
 }

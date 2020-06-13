@@ -108,6 +108,10 @@ a[href]:not([class]):not([btn])
     pointer-events: none;
     background-size: 100%;
 }
+.noripple .waves-ripple
+{
+    display: none !important;
+}
 
 .waves-notransition {
     -webkit-transition: none !important;
@@ -957,7 +961,7 @@ a[btn][icon] {
     border-radius: var(--corner-radius) var(--corner-radius) 0px 0px;
 }
 
-[card] [actions] [btn].right {
+[card] [actions] .right {
     margin-left: auto !important;
 }
 
