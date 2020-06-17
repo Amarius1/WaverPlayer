@@ -31,9 +31,28 @@
             <progress class="linear"></progress>
 
     </section>
+    <span topbar style="background-color: transparent; position: absolute; top: 0px; left: 0px;" class="depth-0">
+    
+        <a btn icon action="#sidenav1">menu</a>
+        <p title>Waver</p>
+        <i icon accent style="font-size: 40px !important; margin-left: -10px !important;">album</i>
+        <a btn icon class="right"></a>
+        <span dropdown>
+            <a btn icon class="activator">more_vert</a>
+            <ul style="width: 170px">
+                <a btn><i>assignment</i>Assignments</a>
+                <a btn>Courses</a>
+                <a btn>Grades</a>
+                <a btn>Wayfinder</a>
+         
+                <a btn class="divider">Log out</a>
+            </ul>
+        </span>
+    </span>
+    
     <section container starter class="margin center v-center">
 
-        <span card style="width: 40%;">
+        <span card style="width: 40%">
           
             <section content>    
                 <p title>Welcome to Waver, new user!</p>
@@ -71,11 +90,8 @@
   
 
 
-<section container class="margin center source mobile" style="height: 100vh; user-select: none !important;">
-        <H1 style="margin-top: 0px; font-weight: 400; display: block; width: 100%;">Waver<i style="font-size: 120px; margin-top: -30px; color: red" icon>album</i></H1>
-        <H6 style="text-align: left !important; width: 100%;">Carefully picked music to help you get through quarantine or anything else.</H6>
-    
-
+<section container class="margin center v-center source mobile" style="height: 100vh; user-select: none !important;">
+   
     <span card container class="center depth-2 player mobile" style="width: 700px">
         <span class="thumbwrap">
             <img thumb src=""> 
@@ -96,7 +112,7 @@
             <a tabindex=-1 btn icon class="large" play>play_arrow</a>
             <a tabindex=-1 btn icon class="large" next>chevron_right</a>
             <a tabindex=-1 btn icon skip-next>skip_next</a>
-            <span dropdown class="speed">
+            <span dropdown class="speed from-bottom">
                 <a btn icon class="activator">slow_motion_video</a>
                 <ul>
                     <a btn speed="0.25">0.25</a>
@@ -107,17 +123,18 @@
                 </ul>
             </span>
             <a btn time style="width: 70px; margin-right: -46px;"></a>
-            <a btn id="restore" class="accent raised">Reset</a>
+        
             
            
 
             
         </section>
-        <a tabindex=-1 btn icon class="raised" dark>filter_b_and_w</a>
+    
+        
         <a btn action="#dialog" class="raised rounded menu" style="">music<i>library_music</i></a>
     </span>
 </section>
-<span dialog id="dialog" class="full-screen">
+<span dialog id="dialog" class="full-screen" playlistpicker>
     <aside>
         <span topbar class="depth-0" style="position: relative;">
             <a btn icon action="#closedialog2">close</a>    
@@ -255,8 +272,8 @@
         </span>
         </section>
     </aside>
-    </span>
-<div class="area" >
+</span>
+<div class="area">
     <ul class="circles" style="margin: 0px; padding: 0px;">
             <li class="playreactbkg"></li>
             <li></li>
@@ -276,15 +293,51 @@
             <li class="playreactbkg"></li>
     </ul>
 </div>
+<span sidenav id="sidenav1">
+    <aside>
+        <section header>
 
+            <p title>Waver</p>
+            <p subtitle class="titleside">Quality Music</p>
+
+        </section>
+        <ul class="divider">
+            <a btn class="accent"><i>play_circle_outline</i>Music Player</a>
+            <a btn action="#dialog"><i>library_music</i>Playlists</a>
+            <a btn id="albums" action="#dialog"><i>album</i>Albums</a>
+            <a btn><i>music_video</i>Play your own</a>
+        </ul>
+         
+        <ul class="divider">
+            <a btn dark><i>filter_b_and_w</i>Dark Mode</a>
+            <a btn><i>dashboard</i>Dashboard</a>
+            <a btn><i>chrome_reader_mode</i>Terms & Conditions</a>
+            <a btn><i>help_outline</i>Help</a>
+            <a btn id="restore" class="accent raised">Reset</a>
+        </ul>
+</aside>
+</span>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://www.youtube.com/player_api"></script>    
 <script src="player.js"></script>
 <script src="hyphen.js"></script>
 <script>
+     $('a[action="#sidenav1"]').click(function() {
+                $('#sidenav1').addClass('open')
+
+            })
      $('a[action="#dialog"]').click(function() {
                 $('#dialog').addClass('open')
                 $('body').addClass('remove-scrollbar')
+                $('[sidenav]').removeClass('open')
+
+            })
+            $('a[action="#dialog"]#albums').click(function() {
+                $('#tab2').toggleClass('active')
+                $('#tab1').toggleClass('active')
+                
+              
+        
 
             })
 

@@ -1,3 +1,8 @@
+:root 
+{
+    --accent: red;
+    --accent-ripple: rgba(255, 36, 20, 0.3);
+}
 .playctrl
 {
     width: 40px;
@@ -35,7 +40,7 @@ body, html
     background: white;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
-    height:100vh;
+    height:102vh;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -360,11 +365,9 @@ progress.linear:indeterminate::-moz-progress-bar {
     }
     .player.mobile [dark]
     {
-        position: absolute;
-        top: -100px !important;
-        left: 10px;
+      
         background-color: white;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.18) !important;
+     
     }
   
     body .player.mobile [play]
@@ -527,18 +530,11 @@ body.dark a[btn].accent.red
 }
 [tabs] > a.active 
 {
-    color: red !important;
+  
     border-radius: 5px !important;
 }
-[tabs] > a.active .waves-ripple
-{
-    background-color: rgba(255,20,20,0.2);
-}
 
-a[btn].active > i 
-{
-    color: red !important;
-}
+
 [collapsible].open ul
 {
     overflow: auto !important;
@@ -576,12 +572,7 @@ a[btn].active > i
 {
     background-color: rgba(255, 40,20, 0.2);
 }
-[dark]
-{
-    position: absolute;
-    left: 16px;
-    top: 20px;
-}
+
 [thumb]
 {
     filter: grayscale(0%);
@@ -590,8 +581,8 @@ a[btn].active > i
     margin-right: -1%;
     margin-left: -1%;
 
-    margin-bottom: -2% !important;
-    margin-top: -1% !important;
+    margin-bottom: calc(-2% - 54px) !important;
+    margin-top: calc(-1% - 62px) !important;
     transition: all 0.3s;
 
 
@@ -656,4 +647,20 @@ body.dark .player p.title
 [starter].final 
 {
     animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.1s both !important;
+}
+[intel]
+{
+    position: absolute;
+    right: 128px;
+    top: 18px;
+}
+.titleside
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.invisible 
+{
+    display: none !important;
 }

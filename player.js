@@ -34,14 +34,16 @@ function onYouTubePlayerAPIReady() {
                 // ["?v=gzDS-Kfd5XQ", "gzDS-Kfd5XQ"]
                 videoId = match[1];
 
-                var thumby = "https://i1.ytimg.com/vi/" + videoId + "/maxresdefault.jpg";
+                var thumby = "https://i1.ytimg.com/vi/" + videoId + "/sddefault.jpg";
              
                 document.querySelector('[thumb]').setAttribute("src", thumby);
 
-                $.getJSON( "https://www.googleapis.com/youtube/v3/videos?part=id%2Csnippet&id=" + videoId + "&key=AIzaSyBe5Bxh3H88cRF9U60dnidcIZd70xrWkvM", function( data ) {
-                //var obj = $.parseJSON(data);
-                    var vidName = data.items[0].snippet.localized.title;
-                    document.querySelector('.title').textContent = vidName;
+                $.getJSON('https://noembed.com/embed',
+                    {format: 'json', url: url}, function (data) {
+                    document.querySelector('.title').textContent = data.title;
+                    document.querySelector('.titleside').textContent = data.title;
+                });
+
                     window.setInterval(function(){
                         var s = Math.trunc(player.getDuration() - player.getCurrentTime());
                         var minutes = Math.floor(s / 60);
@@ -49,8 +51,7 @@ function onYouTubePlayerAPIReady() {
                         document.querySelector('[time]').textContent = minutes + ':' + seconds;
                       }, 1000);
                     
-                   
-                });
+             
 
                 
             }
@@ -218,3 +219,5 @@ var darkmode = 1;
 localStorage.setItem("on", darkmode);
 
 $('p.title').text(localStorage.getItem("darkmode"));
+
+
